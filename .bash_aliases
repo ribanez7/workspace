@@ -44,3 +44,16 @@ export dbs="/home/ribanez/Dropbox/databases"
 if ! [[ $PATH =~ '.rbenv' ]]; then
   export PATH="$PATH:/home/ribanez/programas"
 fi
+
+# Rubén more ls aliases
+# alias emacs='emacs -nw'
+# alias semacs='sudo emacs -nw'
+# alias ll='ls -lh'
+# alias la='ls -lah'
+
+export EDITOR='emacs24-nox'
+export sandbox="/home/ruben/Programs/sandbox"
+export www="/srv/www"
+export mobile="$XDG_RUNTIME_DIR/gvfs/mtp:host=*"
+export ngx="/etc/nginx"
+export hsts="/etc/hosts"

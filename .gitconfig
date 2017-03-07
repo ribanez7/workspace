@@ -3,8 +3,11 @@
   email = ruben.ibc@gmail.com
 
 [core]
-  autocrlf = false
-  safecrlf = true
+  # autocrlf = false
+  # safecrlf = true
+	autocrlf = input
+	safecrlf = true
+	editor = emacs
 
 [alias]
   co = checkout
@@ -23,5 +26,6 @@
 
 [merge]
   tool = diffuse
+
 [push]
   default = simple
