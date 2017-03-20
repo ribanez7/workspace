@@ -24,13 +24,23 @@
  ;; If there is more than one, they won't work right.
  )
 
+;; my functions:
+(defun comment-or-uncomment-region-or-line ()
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+      (setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)))
+
 ;; Key-bindings:
 (global-set-key (kbd "<f6>") 'delete-region)
 (global-set-key (kbd "<f7>") 'indent-region)
 (global-set-key (kbd "<f8>") 'comment-region)
 (global-set-key (kbd "<f9>") 'uncomment-region)
-
 (global-set-key (kbd "<select>") 'end-of-line)
+(global-set-key (kbd "C-q") 'comment-or-uncomment-region-or-line)
 
 ;; Ruby related files:
 (add-to-list 'auto-mode-alist '("Gemfile" . ruby-mode))
