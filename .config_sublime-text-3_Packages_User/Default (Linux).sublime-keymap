@@ -1,0 +1,57 @@
+[
+	{ "keys": ["ctrl+q"], "command": "toggle_comment", "args": { "block": false } },
+	{ "keys": ["ctrl+shift+q"], "command": "toggle_comment", "args": { "block": true } },
+  { "keys": ["f12"],
+      "command": "side_bar_open_in_browser" ,
+      "args": {"paths":[], "type":"testing", "browser":"" }
+  },
+  { "keys": ["alt+f12"],
+      "command": "side_bar_open_in_browser",
+      "args": {"paths":[], "type":"production", "browser":"" }
+  },
+  {
+      "keys": ["ctrl+t"],
+      "command": "side_bar_new_file2"
+  },
+  {
+      "keys": ["f2"],
+      "command": "side_bar_rename"
+  },
+    // // Column mode
+    // { "keys": ["alt+shift+up"], "command": "column_select", "args": {"by": "lines", "forward": false}},
+    // { "keys": ["alt+shift+down"], "command": "column_select", "args": {"by": "lines", "forward": true}},
+    // { "keys": ["alt+shift+pageup"], "command": "column_select", "args": {"by": "pages", "forward": false}},
+    // { "keys": ["alt+shift+pagedown"], "command": "column_select", "args": {"by": "pages", "forward": true}},
+    // { "keys": ["alt+shift+home"], "command": "column_select", "args": {"by": "all", "forward": false}},
+    // { "keys": ["alt+shift+end"], "command": "column_select", "args": {"by": "all", "forward": true}}
+    {
+        "keys": [
+            "shift+alt+0+down"
+        ], 
+        "args": {
+            "action": "decrement_number_by_10"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.decrement_number_by_10"
+            }
+        ]
+    },
+    {
+        "keys": [
+            "shift+alt+0+up"
+        ], 
+        "args": {
+            "action": "increment_number_by_10"
+        }, 
+        "command": "run_emmet_action", 
+        "context": [
+            {
+                "key": "emmet_action_enabled.increment_number_by_10"
+            }
+        ]
+    },
+  { "keys": ["alt+shift+up"], "command": "select_lines", "args": {"forward": false} },
+  { "keys": ["alt+shift+down"], "command": "select_lines", "args": {"forward": true} },
+]
