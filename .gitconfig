@@ -1,31 +1,22 @@
-[user]
-  name = Rubén Ibáñez Carmona
-  email = ruben.ibc@gmail.com
-
 [core]
   # autocrlf = false
   # safecrlf = true
-	autocrlf = input
-	safecrlf = true
-	editor = emacs
+  autocrlf = input
+  safecrlf = true
+  editor = emacs
 
 [alias]
   co = checkout
   ci = commit
   st = status
   br = branch
-  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	hg = log --graph --decorate=short --all --date=short --pretty=format:'%C(yellow)%h %C(green)%ad %C(cyan)%cN%C(auto)%d %C(reset)%s'
-  hist = log --graph --date=short --pretty=format:'%h %ad | %s%d [%an]'
+  hg = log --graph --decorate=short --all --date=short --pretty=format:'%C(yellow)%h %C(green)%ad %C(cyan)%cN%C(auto)%d %C(reset)%s'
   type = cat-file -t
   dump = cat-file -p
   ls = ls-files
   unstage = reset HEAD
   # Show files ignored by git:
   ign = ls-files -o -i --exclude-standard
-
-[merge]
-  tool = diffuse
 
 [push]
   default = simple
